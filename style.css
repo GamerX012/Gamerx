@@ -1,0 +1,607 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+
+:root {
+    --bg-color:#1f242d;
+    --s-color: #10141c;
+}
+
+
+html{
+    font-size: 62.5%;
+    overflow: scroll;
+}
+
+
+.home{
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
+.br {
+    background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);
+}
+
+.cs{
+    background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+}
+
+.contact{
+    background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+}
+
+.tournament {
+    background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+}
+
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background:var(--s-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header.sticky{
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    cursor: default;
+    font-family: 'Mate SC', serif;
+    
+}
+
+.logo span{
+    color: rgb(246, 255, 0);
+    font-family: cursive;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+   
+
+.navbar a{
+    font-size: 1.7rem;
+    color: rgb(255, 255, 255);
+    margin-left: 45px;
+    transition: .3s;
+    font-family: cursive;
+}
+
+
+.navbar a:hover,
+.navbar a.active {
+    color: yellow;
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: rgb(255, 255, 255);
+    display: none;
+}
+
+
+.heading {
+    font-size: 3.5rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 0 0 3rem rgb(0, 0, 0),0 0 3rem rgb(0, 0, 0),0 0 3rem rgb(0, 0, 0);
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.home-content h1{
+    font-size: 11rem;
+    color: yellow;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.home-content h1:hover{
+    transform: scale(1.1);
+    text-shadow: 0 0 2rem black;
+}
+
+
+.home-content h3{
+    font-size: 5rem;
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    text-shadow: 0 0 3rem black;
+}
+
+.box-container {
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-template-columns: repeat(4 , 1fr);
+}
+
+.box-container .box{
+    height: 40rem;
+    width : 30rem;
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    margin : 3rem 1rem;
+    border: .4rem solid var(--s-color);
+    border-radius: 3rem;
+    
+}
+
+.br-img {
+    display: flex;
+    justify-content: center;
+    padding-top: 5.7%;
+}
+
+.box img{
+    width:90%;
+    border: .3rem solid rgb(0, 0, 0);
+    border-radius: 1.5rem;
+}
+
+
+.box .team{
+    margin-top: 10%;
+    text-align: center;
+    line-height: 2;
+   
+}
+
+.box .team h1{
+    font-size: 4rem;
+    color: rgb(123, 0, 255);
+}
+
+.box .team h2{
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+    font-family: 'Mate SC', serif;
+}
+
+.box .fee {
+    display: none;
+}
+
+.box:hover {
+    transform: scale(1.1);
+}
+
+.box:hover .fee {
+    display: block;
+}
+
+.box:hover .team {
+    display: none;
+}
+
+.fee {
+    text-align: center;
+    margin-top: 5rem;
+    line-height: 2;
+    color: white;
+}
+
+.fee h2{
+    font-size: 2rem;
+}
+
+.fee h3{
+    color: rgb(0, 0, 0);
+}
+
+.cs-container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.cs-box {
+    height: 45rem;
+    width: 30rem;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    margin-left: 2rem;
+    margin-top: 3rem;
+    border: .3rem solid yellow;
+    border-radius: 1.5rem;
+}
+
+.squad-1{
+    height: 22.5rem;
+    width: 28rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.squad-1 img {
+    width: 20rem;
+    margin-bottom: 3rem;
+    
+}
+
+.squad-2{
+    height: 22.5rem;
+    width: 28rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.squad-2 img {
+    width: 20rem;
+    margin-top: 3rem;
+  
+}
+
+.vs {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.vs img{
+    position: absolute;
+    z-index: 1;
+    width: 10rem;
+}
+
+.cs-box:hover .squad-1 {
+    display: none;
+}
+
+.cs-box:hover .squad-2 {
+    display: none;
+}
+
+.cs-box:hover .vs {
+    display: none;
+}
+
+.time {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 6rem;
+    line-height: 1.5;
+}
+
+.time img {
+    width: 20rem;
+    margin-top: 3rem;
+}
+
+.time {
+    display: none;
+}
+
+.cs-box:hover .time{
+    display: block;
+}
+
+.cs-box:hover {
+    transform: scale(1.1);
+    border-radius: 2rem;
+    border: .3rem solid white;
+}
+
+.tournament-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tournament-box{
+    height: 50rem;
+    width: 50rem;
+    border: .5rem solid yellow;
+    border-radius: 5rem;
+    background-color: var(--s-color);
+    
+    text-align: center;
+    line-height: 1.8;
+}
+
+.tournament-box:hover {
+    transform: scale(1.1);
+}
+
+.tournament-box h1{
+    color: rgb(255, 242, 0);
+    font-size: 4rem;
+    font-weight: 900;
+    text-shadow: 0 0 1rem rgb(0, 0, 0);
+}
+
+.tournament-box h4{
+    color: #ffffff;
+    font-size: 4rem;
+    animation: blink .2s linear infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+        text-shadow: 0 0 1rem rgb(225, 255, 0);
+    }
+}
+
+.tournament-box h2{
+    color: #48ff00;
+    font-size: 4.5rem;
+}
+
+.tournament-box h3{
+    color: cyan;
+    font-size: 3rem;
+}
+
+.tournament-box .btn{
+    display: inline-block;
+   height: 5rem;
+   width: 20rem;
+   background-color: yellow;
+   border-radius: 1.5rem;
+   margin-top: 1.9rem;
+   font-size: 2rem;
+   padding-top: .8rem;
+   font-weight: 900;
+   color: rgb(0, 0, 0);
+   text-shadow: 0 0 1rem rgb(255, 255, 255),
+   0 0 1rem rgb(255, 255, 255),0 0 1rem rgb(255, 255, 255);
+}
+
+
+.btn:hover {
+    box-shadow: 0 0 1rem rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.social-media h2{
+    color: white;
+    font-weight: 800;
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+.social-media a{
+display: inline-flex;
+justify-content: center;
+align-items: center;
+background:rgb(255, 255, 255);
+border: .4rem solid rgb(172, 167, 0);
+font-size: 3rem;
+margin: 5rem;
+height: 9rem;
+width: 9rem;
+border-radius: 50%;
+}
+
+
+.footer{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--s-color);
+}
+
+
+.footer-text p{
+    font-size: 1.9rem;
+    color: white;
+}
+
+.footer-iconTop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: yellow;
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+
+.footer-iconTop a:hover{
+    box-shadow: 0 0 1rem yellow;
+}
+
+.footer-iconTop a i{
+    font-size: 2.4rem;
+    color: black;
+
+}
+
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+
+
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .box-container {
+        grid-template-columns: repeat(2 , 1fr);
+        padding-left: 10%;
+        padding-top: 5%;
+    }
+
+    .cs-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 10%;
+        padding-top: 5%;
+    }
+
+    .tournament-container {
+        padding-top: 15%;
+    }
+
+    .contact-container{
+        padding-top: 25%;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding:  1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .box-container {
+        padding-left: 2%;
+    }
+
+    .cs-container{
+        padding-left:2%;
+    }
+
+    .tournament-container{
+        padding-top: 25%;
+    }
+
+    .contact-container {
+        padding-top: 30%;
+    }
+}
+
+
+@media (max-width: 617px) {
+    .box-container {
+        grid-template-columns: 1fr;
+       padding-left: 14%;
+    }
+
+    .cs-container{
+        grid-template-columns: 1fr;
+        padding-left: 14%;
+    }
+}
+
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 365px) {
+     .home-content h1{
+        font-size: 9rem;
+     }
+
+     .home-content h3{
+        font-size: 4rem;
+     }
+    .cs-container{
+        padding-left: 10%;
+    }
+
+    .box-container{
+        padding-left: 12%;
+    }
+    
+    .social-media {
+    padding-top: 30%;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer p {
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
