@@ -34,4 +34,8 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 };
 
+function message() {
+    alert("🚫 Contact Me in Instagram 🚫")
+}
+
 
